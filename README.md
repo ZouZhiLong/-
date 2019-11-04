@@ -8,5 +8,5 @@
 直接克隆到本地使用
 
 #### 感谢
-表情的功能感谢[Jack](https://github.com/jackzhum/miniprogram-emotion)的表情包的emotion.js
+表情的功能感谢[Jack](https://github.com/jackzhum/miniprogram-emotion)的表情包的emotion.js   
 [此处是表情包的开源github](https://github.com/jackzhum/miniprogram-emotion)
