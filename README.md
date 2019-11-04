@@ -13,6 +13,10 @@
 > 可以自动网上推   
 > 同时解决了textarea带来的些BUG   
 
+
 #### 感谢
 表情的功能感谢[Jack](https://github.com/jackzhum/miniprogram-emotion)的表情包的emotion.js   
 [此处是表情包的开源github](https://github.com/jackzhum/miniprogram-emotion)
+
+#### 若有疑问可提出来
+#### 若觉得好用，麻烦手动Start
