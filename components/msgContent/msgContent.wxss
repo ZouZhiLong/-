@@ -1,0 +1,53 @@
+/* components/msgContent/msgContent.wxss */
+/* components/talkContent/talkContent.wxss */
+.msg_box{
+  display: flex;
+  
+  margin-top: 30rpx;
+}
+.left{  
+  justify-content: flex-start;
+}
+.right{
+  flex-direction:  row-reverse;
+}
+.header_img{
+  width: 80rpx;
+  height: 80rpx;
+  background: skyblue;
+  border-radius: 50%;
+  margin:0 30rpx
+}
+.msg_content{
+  max-width: 65%;
+  padding: 20rpx;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10rpx;
+}
+.msg_content::before{
+    width: 0;
+    height: 0;
+    border-top: 10rpx solid transparent;
+    border-bottom: 10rpx solid transparent;
+    content:"";
+    position: absolute;
+}
+.left .msg_content::before{
+    border-right: 20rpx solid #fff;
+    left: -18rpx;
+}
+.right .msg_content::before{
+    border-left: 20rpx solid lightgreen;
+    right: -18rpx;
+}
+.msg_img {
+  padding: 10rpx;
+  /* background: #fff; */
+  border-radius: 10rpx;
+}
+.msg_img image{
+  width: 200rpx;
+  height: 300rpx;
+}

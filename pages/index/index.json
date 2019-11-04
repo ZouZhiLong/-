@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "msg-content":"/components/msgContent/msgContent"
+  }
+}

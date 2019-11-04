@@ -1,0 +1,13 @@
+<!--components/msgContent/msgContent.wxml-->
+<view class="{{isMySend?'right':'left'}} msg_box" >
+  <image class="header_img" src="{{isMySend?'/image/amazing.jpg':'/image/header.jpg'}}" mode="aspectFill"></image>
+  <view class="msg_content " wx:if="{{msgType=='text'}}" style="{{isMySend?'background:lightgreen':''}}">
+    <rich-text nodes='{{msgText}}'></rich-text>
+  </view>
+  <view class="msg_img" wx:if="{{msgType=='img'}}">
+    <image src="{{msgImage}}" mode="aspectFill" bindtap="toPreviewImage" ></image>
+  </view>
+</view>
+
+
+

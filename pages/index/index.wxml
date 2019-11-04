@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<scroll-view style="width:{{scrollWidth}}px;height:{{scrollHeight}}px;" scroll-y scroll-into-view='{{scrollView}}'
+             scroll-with-animation='{{true}}'>
+  <block wx:for="{{msgList}}" wx:key='index' >
+     <msg-content isMySend="{{item.fromName}}" msgContent="{{item.msg}}" id="{{'scroll'+index}}"
+                   msgType='{{item.msgType}}' msgImage='{{item.msgImg}}'></msg-content>
+  </block>
+  
+</scroll-view>
+
+<view class="bottom_box clearfix" id="bottom_Menu">
+  <view class="wantTo">
+    <view class="wantTitle">我想要</view>
+    <button class="wantOptions">拨打电话</button>
+    <button class="wantOptions">添加微信</button>
+    <button class="wantOptions">咨询其他</button>
+  </view>
+  <view class="sendTo" style="align-items: flex-end;">
+    <view class="textarea_box">
+      <textarea auto-height='{{true}}' bindlinechange="getTextLine" show-confirm-bar="{{false}}"
+                cursor-spacing="{{keyboardInterval}}" id="textinput" bindinput="watchMsgInput"
+                value='{{msgInput}}' bindfocus="noneExpMenu"   disabled="{{expressionList}}"
+                catchtap="clickTextarea" focus="{{isFocus}}"></textarea>
+    </view>
+    <view bindtap="showExpression">
+      <!-- <icon type="info"></icon> -->
+      <image src="/image/exper.png" class="exper_tap"></image>
+    </view>
+    <view class="send_btn" wx:if="{{msgInput!==''}}">
+      <button style="background: skyblue;" bindtap="sendMsg">发送</button>
+    </view>
+    <view class="icon_btn" wx:else catchtap="showMenu">
+      <image src="/image/click.png"></image>
+    </view>
+  </view>
+
+  <!-- 表情包的列表 -->
+  <view class="bottom_more {{expressionList?'bottom_more_show':'bottom_more_none'}}" >
+    <scroll-view scroll-y style="max-height:300rpx">
+      <view style='display:flex;flex-wrap:wrap'>
+        <block wx:for="{{expressionArr}}" wx:key="index">
+            <rich-text nodes='{{item.img}}' class="a_expresion"  
+                      bindtap="getExpresionCode" data-expcode='{{item.code}}'></rich-text>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

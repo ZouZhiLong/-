@@ -1,0 +1,14 @@
+/**app.wxss**/
+page{
+  --base-text-size:28rpx;
+  --base-background-color:#fafafa;
+  --base-text-color:#333;
+  --theme-text-color:skyblue;
+  --theme-background-color:skyblue;
+  --base-box-shadow:0px 6rpx 30rpx 0px rgba(92,192,249,0.1);
+  --base-border-raduis:5rpx;
+}
+button{
+  padding: 0;
+  background: rgba(0, 0, 0, 0)
+}
