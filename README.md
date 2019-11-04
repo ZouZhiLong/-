@@ -19,4 +19,4 @@
 [此处是表情包的开源github](https://github.com/jackzhum/miniprogram-emotion)
 
 #### 若有疑问可提出来
-#### 若觉得好用，麻烦手动Start
+#### 若觉得好用，麻烦手动Star
